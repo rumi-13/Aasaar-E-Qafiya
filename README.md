@@ -23,4 +23,4 @@ GSAP: Utilized the power of GreenSock Animation Platform (https://gsap.com/).
 
 Quotes: Sourced from https://www.rekhta.org/.
 
-Developed and Designed By : Muhammad Asgar Rumi
+Developed and Designed By : Asgar Rashid
