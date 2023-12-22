@@ -84,9 +84,10 @@ body{
         font-size: 60px;
         list-style-type: none;
 }
-#nav-part1 li span :hover{
-         font-size: 0vh;
+#nav-part1 li span:hover {
+  font-size: 0vh;
 }
+
 
 /* Main Container and Quote*/
  #container {
