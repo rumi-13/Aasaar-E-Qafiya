@@ -75,12 +75,14 @@ body{
     text-decoration: none;
     color: rgb(255, 255, 255);
     height: 35px;
-    width: 35px;
-    
-    
+    width: 35px; 
+}
+#nav-part1 li{
+        list-style-type: none;
 }
 #nav-part1 li :hover{
         font-size: 60px;
+        list-style-type: none;
 }
 
 /* Main Container and Quote*/
