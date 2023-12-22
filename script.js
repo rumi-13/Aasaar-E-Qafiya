@@ -1,3 +1,4 @@
+// Selecting the Buttons and other Elements needed
 const copyBtn = document.getElementById('copyButton');
 const nextBtn = document.getElementById('nextButton');
 const quote = document.getElementById('main-quote');
@@ -7,7 +8,7 @@ const nextText = document.querySelector('#nextContainer p');
 const container = document.getElementById('container');
 
 
-
+// CopyButton complete functionality added
 copyBtn.addEventListener('click', function(){
     navigator.clipboard.writeText(quote.innerText + poet.innerHTML);
 })
@@ -20,7 +21,7 @@ copyBtn.addEventListener('mouseout', function(){
     copyText.style.display = "none";
 })
 
-
+// NextButton mouseover and mouseout functionality added
 nextBtn.addEventListener('mouseover', function(){
     nextText.style.display = "block";
     gsap.from("",{
@@ -33,8 +34,8 @@ nextBtn.addEventListener('mouseout', function(){
 })
 
 
-
-const tl = gsap.timeline();
+//Gsap animation Starts Here
+const tl = gsap.timeline();    
 
 tl.from("#nav-part0 p",{
     y:100,
@@ -57,7 +58,7 @@ gsap.from("#container",{
 
 
 
-
+// An array which contains multiple sher/quotes with their respective poet name
 const sher = [
     {
         quote: " sab ḳhvāhisheñ puurī hoñ 'farāz' aisā nahīñ hai <br> jaise ka.ī ash.ār mukammal nahīñ hote   ",
@@ -102,13 +103,14 @@ const sher = [
 ];
 
 
+//Real functionality of nextButton to swipe for next quote/sher with animation
 nextBtn.addEventListener('click', function(){
 
     gsap.from("#main-quote, #author",{
         x:-500,
         stagger:0.3,
     });
-    let random = Math.floor(Math.random()*sher.length);
+    let random = Math.floor(Math.random()*sher.length);   // generates a random number to choose a quote randomly
     quote.innerHTML =  sher[random].quote;
     poet.innerHTML= "- "+sher[random].poet;
 })
